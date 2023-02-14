@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\s2100949\\source\\repos\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj": {}
+    "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj": {}
   },
   "projects": {
-    "C:\\Users\\s2100949\\source\\repos\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj": {
+    "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s2100949\\source\\repos\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj",
+        "projectUniqueName": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj",
         "projectName": "Ruoka-annos Generaattori",
-        "projectPath": "C:\\Users\\s2100949\\source\\repos\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj",
+        "projectPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori.csproj",
         "packagesPath": "C:\\Users\\s2100949\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s2100949\\source\\repos\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\obj\\",
+        "outputPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Ruoka-annos Generaattori\\Ruoka-annos Generaattori\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\s2100949\\AppData\\Roaming\\NuGet\\NuGet.Config",

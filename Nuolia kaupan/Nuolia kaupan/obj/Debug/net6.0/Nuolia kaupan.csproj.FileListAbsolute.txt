@@ -1,0 +1,15 @@
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.csproj.AssemblyReference.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.AssemblyInfoInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.AssemblyInfo.cs
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.csproj.CoreCompileInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\bin\Debug\net6.0\Nuolia kaupan.exe
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\bin\Debug\net6.0\Nuolia kaupan.deps.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\bin\Debug\net6.0\Nuolia kaupan.runtimeconfig.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\bin\Debug\net6.0\Nuolia kaupan.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\bin\Debug\net6.0\Nuolia kaupan.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\refint\Nuolia kaupan.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\Nuolia kaupan.genruntimeconfig.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Nuolia kaupan\Nuolia kaupan\obj\Debug\net6.0\ref\Nuolia kaupan.dll
