@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Nuolia kaupan\\Nuolia kaupan\\Nuolia kaupan.csproj",
-      "projectName": "Nuolia kaupan",
-      "projectPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Nuolia kaupan\\Nuolia kaupan\\Nuolia kaupan.csproj",
+      "projectUniqueName": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\testt\\testt\\testt.csproj",
+      "projectName": "testt",
+      "projectPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\testt\\testt\\testt.csproj",
       "packagesPath": "C:\\Users\\s2100949\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Nuolia kaupan\\Nuolia kaupan\\obj\\",
+      "outputPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\testt\\testt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\s2100949\\AppData\\Roaming\\NuGet\\NuGet.Config",

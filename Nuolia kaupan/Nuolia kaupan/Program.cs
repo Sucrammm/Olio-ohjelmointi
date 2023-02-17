@@ -38,7 +38,7 @@ Console.WriteLine("Nuoli maksaa " + tilattuNuoli.PalautaHinta() + " kultaa");
 public class Nuoli
 {
     private string _karki;
-    private string _pera;
+    private string _pera;   
     private double _pituus;
     private double nuolenhinta;
 
@@ -63,7 +63,7 @@ public class Nuoli
         {
             nuolenhinta += 1;
         }
-        if (karki == "kotkansulka")
+        if (_pera == "kotkansulka")
         {
             nuolenhinta += 5;
         }
