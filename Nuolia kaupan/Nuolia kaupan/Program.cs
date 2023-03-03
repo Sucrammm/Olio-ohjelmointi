@@ -31,14 +31,14 @@ while (pituustilaus < 60 || pituustilaus > 100)
     }
 }
 Nuoli tilattuNuoli = new Nuoli(karkitilaus, peratilaus, pituustilaus);
-Console.WriteLine("Nuoli maksaa " + tilattuNuoli.PalautaHinta() + " kultaa");
+Console.WriteLine("Nuoli maksaa " + tilattuNuoli.PalautaHinta + " kultaa");
 
 
 
 public class Nuoli
 {
     private string _karki;
-    private string _pera;   
+    private string _pera;
     private double _pituus;
     private double nuolenhinta;
 
@@ -71,20 +71,24 @@ public class Nuoli
         return;
     }
 
-    public double PalautaHinta()
+    public double PalautaHinta
     {
-        return nuolenhinta;
+        get { return nuolenhinta; }
+        set { nuolenhinta = value; }
     }
-    public string Karki()
+    public string Karki
     {
-        return _karki;
+        get { return _karki; }
+        set { _karki = value; }
     }
-    public string Pera()
+    public string Pera
     {
-        return _pera;
+        get { return _pera; }
+        set { _pera = value; }
     }
-    public double Pituus()
+    public double Pituus
     {
-        return _pituus;
+        get { return _pituus; }
+        set { _pituus = value; }
     }
 }
