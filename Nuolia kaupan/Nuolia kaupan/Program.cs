@@ -2,38 +2,75 @@
 string peratilaus = "b";
 int pituustilaus = 0;
 string haluttupituus;
+string valinta;
 
-Console.WriteLine("Minkälainen kärki (puu, teräs, timantti) :");
-while (karkitilaus != "puu" || karkitilaus != "teräs" || karkitilaus != "timantti")
+Console.WriteLine("Haluatko valita valmiin nuolen vai tehdä oman? (v = valmis, o = oma)");
+while (true)
 {
-    karkitilaus = Console.ReadLine();
-    if (karkitilaus == "puu" || karkitilaus == "timantti" || karkitilaus == "teräs")
+    valinta = Console.ReadLine();
+    if (valinta == "v" || valinta == "o")
     {
         break;
     }
 }
-Console.WriteLine("Minkälainen perä (lehti, kanansulka, kotkansulka) :");
-while (peratilaus != "lehti" || peratilaus != "kanansulka" || peratilaus != "kotkansulka")
+
+Nuoli tilattuNuoli;
+if (valinta == "v")
 {
-    peratilaus = Console.ReadLine();
-    if (peratilaus == "lehti" || peratilaus == "kanansulka" || peratilaus == "kotkansulka")
+    Console.WriteLine("Valitse nuolen tyyppi (1 = aloittelijanuoli, 2 = perusnuoli, 3 = eliitti nuoli)");
+    while (true)
     {
-        break;
+        string valittuNuoli = Console.ReadLine();
+        if (valittuNuoli == "1")
+        {
+            tilattuNuoli = Nuoli.LuoAloittelijanuoli();
+            break;
+        }
+        else if (valittuNuoli == "2")
+        {
+            tilattuNuoli = Nuoli.LuoPerusnuoli();
+            break;
+        }
+        else if (valittuNuoli == "3")
+        {
+            tilattuNuoli = Nuoli.LuoEliittiNuoli();
+            break;
+        }
     }
 }
-Console.WriteLine("Nuolen pituus (60-100cm) :");
-while (pituustilaus < 60 || pituustilaus > 100)
+else
 {
-    haluttupituus = Console.ReadLine();
-    if (int.TryParse(haluttupituus, out pituustilaus) == true && pituustilaus < 100 && pituustilaus > 60)
+    Console.WriteLine("Minkälainen kärki (puu, teräs, timantti) :");
+    while (karkitilaus != "puu" || karkitilaus != "teräs" || karkitilaus != "timantti")
     {
-        break;
+        karkitilaus = Console.ReadLine();
+        if (karkitilaus == "puu" || karkitilaus == "timantti" || karkitilaus == "teräs")
+        {
+            break;
+        }
     }
+    Console.WriteLine("Minkälainen perä (lehti, kanansulka, kotkansulka) :");
+    while (peratilaus != "lehti" || peratilaus != "kanansulka" || peratilaus != "kotkansulka")
+    {
+        peratilaus = Console.ReadLine();
+        if (peratilaus == "lehti" || peratilaus == "kanansulka" || peratilaus == "kotkansulka")
+        {
+            break;
+        }
+    }
+    Console.WriteLine("Nuolen pituus (60-100cm) :");
+    while (pituustilaus < 60 || pituustilaus > 100)
+    {
+        haluttupituus = Console.ReadLine();
+        if (int.TryParse(haluttupituus, out pituustilaus) == true && pituustilaus < 100 && pituustilaus > 60)
+        {
+            break;
+        }
+    } 
+    tilattuNuoli = new Nuoli(karkitilaus, peratilaus, pituustilaus);
 }
-Nuoli tilattuNuoli = new Nuoli(karkitilaus, peratilaus, pituustilaus);
+
 Console.WriteLine("Nuoli maksaa " + tilattuNuoli.PalautaHinta + " kultaa");
-
-
 
 public class Nuoli
 {
@@ -69,6 +106,18 @@ public class Nuoli
         }
         nuolenhinta = nuolenhinta + _pituus * 0.05;
         return;
+    }
+    public static Nuoli LuoEliittiNuoli()
+    {
+        return new Nuoli("timantti", "kotkansulka", 100);
+    }
+    public static Nuoli LuoAloittelijanuoli()
+    {
+        return new Nuoli("puu", "kanansulka", 70);
+    }
+    public static Nuoli LuoPerusnuoli()
+    {
+        return new Nuoli("teräs", "kanansulka", 85);
     }
 
     public double PalautaHinta
