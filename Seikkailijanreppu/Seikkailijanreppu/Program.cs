@@ -10,36 +10,71 @@ class Tavara
         Paino = paino;
         Tilavuus = tilavuus;
     }
+
+    public override string ToString()
+    {
+        return this.GetType().Name;
+    }
 }
 
 class Nuoli : Tavara
 {
     public Nuoli() : base(0.1, 0.05) { }
+
+    public override string ToString()
+    {
+        return "Nuoli";
+    }
 }
 
 class Jousi : Tavara
 {
     public Jousi() : base(1, 4) { }
+
+    public override string ToString()
+    {
+        return "Jousi";
+    }
 }
 
 class Köysi : Tavara
 {
     public Köysi() : base(1, 1.5) { }
+
+    public override string ToString()
+    {
+        return "Köysi";
+    }
 }
 
 class Vesi : Tavara
 {
     public Vesi() : base(2, 2) { }
+
+    public override string ToString()
+    {
+        return "Vesi";
+    }
 }
 
 class RuokaAnnos : Tavara
 {
     public RuokaAnnos() : base(1, 0.5) { }
+
+    public override string ToString()
+    {
+        return "Ruokaa";
+    }
 }
 
 class Miekka : Tavara
 {
     public Miekka() : base(5, 3) { }
+
+    public override string ToString()
+    {
+        return "Miekka";
+    }
 }
 
 class Reppu
@@ -48,9 +83,9 @@ class Reppu
     private int maksimiTavaroidenMaara;
     private double maksimiKantoPaino;
     private double maksimiTilavuus;
-    public int tavaroidenMaara;
-    private double tavaroidenPaino;
-    private double tavaroidenTilavuus;
+    public int tavaroidenMaara = 0;
+    private double tavaroidenPaino = 0;
+    private double tavaroidenTilavuus = 0;
 
     public Reppu(int maksimiTavaroidenMaara, double maksimiKantoPaino, double maksimiTilavuus)
     {
@@ -79,12 +114,29 @@ class Reppu
         return true;
     }
 
+    public override string ToString()
+    {
+        string sisalto = "Reppussa on seuraavat tavarat: ";
+        for (int i = 0; i < tavaroidenMaara; i++)
+        {
+            sisalto += tavarat[i].ToString();
+            if (i < tavaroidenMaara - 1)
+            {
+                sisalto += ", ";
+            }
+        }
+        return sisalto;
+    }
+
     public static void Main()
-    {   
+    {
         Reppu reppu = new Reppu(10, 30, 20);
+
 
         for (int i = 0; i < 10; i++)
         {
+            Console.WriteLine(reppu.ToString());
+
             Console.WriteLine($"Repussa on tällä hetkllä {reppu.tavaroidenMaara}/10 tavaraa, {reppu.tavaroidenPaino}/30 painoa ja {reppu.tavaroidenTilavuus}/20 tilavuus.");
 
             Console.WriteLine("Mitä haluat lisätä?");
