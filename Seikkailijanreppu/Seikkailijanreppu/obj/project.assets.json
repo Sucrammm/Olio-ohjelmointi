@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\.net osa1\\Seikkailijanreppu\\Seikkailijanreppu\\Seikkailijanreppu.csproj",
+      "projectUniqueName": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Seikkailijanreppu\\Seikkailijanreppu\\Seikkailijanreppu.csproj",
       "projectName": "Seikkailijanreppu",
-      "projectPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\.net osa1\\Seikkailijanreppu\\Seikkailijanreppu\\Seikkailijanreppu.csproj",
+      "projectPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Seikkailijanreppu\\Seikkailijanreppu\\Seikkailijanreppu.csproj",
       "packagesPath": "C:\\Users\\s2100949\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\.net osa1\\Seikkailijanreppu\\Seikkailijanreppu\\obj\\",
+      "outputPath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\Seikkailijanreppu\\Seikkailijanreppu\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\s2100949\\AppData\\Roaming\\NuGet\\NuGet.Config",
