@@ -1,0 +1,15 @@
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\bin\Debug\net6.0\koordinaatisto.exe
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\bin\Debug\net6.0\koordinaatisto.deps.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\bin\Debug\net6.0\koordinaatisto.runtimeconfig.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\bin\Debug\net6.0\koordinaatisto.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\bin\Debug\net6.0\koordinaatisto.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.csproj.AssemblyReference.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.AssemblyInfoInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.AssemblyInfo.cs
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.csproj.CoreCompileInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\refint\koordinaatisto.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\koordinaatisto.genruntimeconfig.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\koordinaatisto\koordinaatisto\obj\Debug\net6.0\ref\koordinaatisto.dll
