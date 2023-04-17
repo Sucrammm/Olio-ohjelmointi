@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "htxpSoD327EYjtdKeyk8dinkzYCzBC0w6StaV79IeYCA4ySOd2qkJw8Ixbx5Lm7uxZ66ayRA58zLRDGK0pKsyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\s2100949\\OneDrive - Business College Helsinki\\Työpöytä\\olio ohjelmointi\\test\\test\\test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\s2100949\\.nuget\\packages\\raylib-cs\\4.2.0.2\\raylib-cs.4.2.0.2.nupkg.sha512",
+    "C:\\Users\\s2100949\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

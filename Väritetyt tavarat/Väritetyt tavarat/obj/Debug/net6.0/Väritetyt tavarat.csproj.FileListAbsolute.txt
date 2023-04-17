@@ -1,0 +1,15 @@
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\bin\Debug\net6.0\Väritetyt tavarat.exe
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\bin\Debug\net6.0\Väritetyt tavarat.deps.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\bin\Debug\net6.0\Väritetyt tavarat.runtimeconfig.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\bin\Debug\net6.0\Väritetyt tavarat.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\bin\Debug\net6.0\Väritetyt tavarat.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.csproj.AssemblyReference.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.AssemblyInfoInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.AssemblyInfo.cs
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.csproj.CoreCompileInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\refint\Väritetyt tavarat.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\Väritetyt tavarat.genruntimeconfig.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\Väritetyt tavarat\Väritetyt tavarat\obj\Debug\net6.0\ref\Väritetyt tavarat.dll
