@@ -1,0 +1,15 @@
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.csproj.AssemblyReference.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.AssemblyInfoInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.AssemblyInfo.cs
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.csproj.CoreCompileInputs.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\bin\Debug\net6.0\LoppuProjekti.exe
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\bin\Debug\net6.0\LoppuProjekti.deps.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\bin\Debug\net6.0\LoppuProjekti.runtimeconfig.json
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\bin\Debug\net6.0\LoppuProjekti.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\bin\Debug\net6.0\LoppuProjekti.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\refint\LoppuProjekti.dll
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.pdb
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\LoppuProjekti.genruntimeconfig.cache
+C:\Users\s2100949\OneDrive - Business College Helsinki\Työpöytä\olio ohjelmointi\LoppuProjekti\LoppuProjekti\obj\Debug\net6.0\ref\LoppuProjekti.dll

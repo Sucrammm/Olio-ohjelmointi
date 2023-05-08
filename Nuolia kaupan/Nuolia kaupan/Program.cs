@@ -1,5 +1,5 @@
-﻿string karkitilaus = "a";
-string peratilaus = "b";
+﻿string karkitilaus = "karki";
+string peratilaus = "pera";
 int pituustilaus = 0;
 string haluttupituus;
 string valinta;
@@ -14,31 +14,33 @@ while (true)
     }
 }
 
-Nuoli tilattuNuoli;
+Nuoli tilattuNuoli = null;
 if (valinta == "v")
 {
     Console.WriteLine("Valitse nuolen tyyppi (1 = aloittelijanuoli, 2 = perusnuoli, 3 = eliitti nuoli)");
     while (true)
     {
         string valittuNuoli = Console.ReadLine();
-        if (valittuNuoli == "1")
+        switch (valittuNuoli)
         {
-            tilattuNuoli = Nuoli.LuoAloittelijanuoli();
-            break;
+            case "1":
+                tilattuNuoli = Nuoli.LuoAloittelijanuoli();
+                break;
+            case "2":
+                tilattuNuoli = Nuoli.LuoPerusnuoli();
+                break;
+            case "3":
+                tilattuNuoli = Nuoli.LuoEliittiNuoli();
+                break;
         }
-        else if (valittuNuoli == "2")
+        if (tilattuNuoli != null)
         {
-            tilattuNuoli = Nuoli.LuoPerusnuoli();
-            break;
-        }
-        else if (valittuNuoli == "3")
-        {
-            tilattuNuoli = Nuoli.LuoEliittiNuoli();
             break;
         }
     }
 }
-else
+
+if (valinta == "o")
 {
     Console.WriteLine("Minkälainen kärki (puu, teräs, timantti) :");
     while (karkitilaus != "puu" || karkitilaus != "teräs" || karkitilaus != "timantti")
