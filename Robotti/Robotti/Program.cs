@@ -1,4 +1,7 @@
-﻿public interface IRobottiKäsky
+﻿using System;
+using System.Collections.Generic;
+
+public interface IRobottiKäsky
 {
     void Suorita(Robotti robotti);
 }
