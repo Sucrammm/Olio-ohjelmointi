@@ -1,167 +1,374 @@
 ﻿using System;
 
-namespace KnightsQuest
+namespace LoppuProjekti
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Knight's Quest!");
+            Console.WriteLine("Tervetuloa ritaripeliin!");
 
-            // Create a new instance of the Player class
+            Enemy örkki = new Örkki();
+            Enemy trolli = new Trolli();
+            Enemy lohikäärme = new Lohikäärme();
+            
             Player player = new Player();
 
-            // Create a list of enemies
-            List<Enemy> enemies = new List<Enemy>();
-            enemies.Add(new Goblin("Goblin"));
-            enemies.Add(new Orc("Orc"));
-            enemies.Add(new Dragon("Dragon"));
+            Weapon hammer = new Weapon() { Name = "Vasara", Damage = 1 };
+            Weapon Ring = new Weapon() { Name = "Sormus", Damage= 2 };
+            Armor helmet = new Armor() { Name = "Kypärä", Defense = 5 };
+            Armor shield = new Armor() { Name = "Kilpi", Defense = 7 };
+          
+            player.EquippedWeapon = hammer;
+            player.EquippedWeapon = Ring;
+            player.EquippedArmor = helmet;
+            player.EquippedArmor = shield;
 
-            // Create a new instance of the Shop class
-            Shop shop = new Shop();
+            List<Item> inventory = new List<Item>();
 
-            // Loop until the player defeats the enemy
             while (true)
             {
                 Console.WriteLine();
-                Console.WriteLine("What do you want to do?");
-                Console.WriteLine("1. Visit the shop");
-                Console.WriteLine("2. Fight an enemy");
-                Console.WriteLine("3. Quit the game");
-                Console.Write("Enter choice: ");
+                Console.WriteLine("Mitä aiot tehdä?");
+                Console.WriteLine("1. Kauppa");
+                Console.WriteLine("2. Hyökkää");
+                Console.WriteLine("3. Inventory");
+                Console.WriteLine("4. Lopeta peli");
+                Console.Write("Valinta: ");
 
                 int choice = int.Parse(Console.ReadLine());
 
-                // Handle the player's choice
-                switch (choice)
+                if (choice == 1)
                 {
-                    case 1:
-                        shop.Visit(player);
-                        break;
-                    case 2:
-                        Console.WriteLine("Choose an enemy to fight:");
+                    Console.WriteLine();
+                    Console.WriteLine($"Olet kaupassa");
 
-                        // Print the list of enemies
-                        for (int i = 0; i < enemies.Count; i++)
+                    while (true)
+                    {
+                        Console.WriteLine($"Kulta määrä: {player.Money}");
+
+                        Console.WriteLine("Mitä aiot tehdä?");
+                        Console.WriteLine("");
+                        Console.WriteLine("1. Kypärä (5 kultaa)");
+                        Console.WriteLine("Kypärä antaa +5 hp");
+                        Console.WriteLine("");
+                        Console.WriteLine("2. HP potion (5 kultaa)");
+                        Console.WriteLine("kun käytetty taistelussa lisää +20 hp");
+                        Console.WriteLine("");
+                        Console.WriteLine("3. Vasara (5 kultaa)");
+                        Console.WriteLine("Antaa pelaajalle +1 dmg ja vähentää -2 hp");
+                        Console.WriteLine("");
+                        Console.WriteLine("4. Sormus (10 kultaa)");
+                        Console.WriteLine("Lisää +2 ability dmg ja vähentää -2 hp");
+                        Console.WriteLine("");
+                        Console.WriteLine("5. Kilpi (10 kultaa)");
+                        Console.WriteLine("Kilpi antaa +7 hp ja -2 dmg");
+                        Console.WriteLine("");
+                        Console.WriteLine("6. Takaisin");
+                        Console.Write("Valinta: ");
+
+                        int valinta = int.Parse(Console.ReadLine());
+                        Console.WriteLine("");
+
+                        if (valinta == 6)
                         {
-                            Console.WriteLine($"{i + 1}. {enemies[i].Name}");
+                            break;
                         }
 
-                        // Ask the player to choose an enemy
-                        Console.Write("Enter choice: ");
-                        int enemyChoice = int.Parse(Console.ReadLine());
-
-                        // Validate the enemy choice
-                        if (enemyChoice < 1 || enemyChoice > enemies.Count)
+                        if (player.Money < 5)
                         {
-                            Console.WriteLine("Invalid choice!");
+                            Console.WriteLine("sinulla ei ole varaa siihen");
+                        }
+
+                        else
+                        {
+                            if (valinta == 1)
+                            {
+                                Console.WriteLine("Ostit kypärän ja sait +5 hp enemmän");
+                                player.Health += 5;
+                                player.Money -= 5;
+                                inventory.Add(helmet);
+                            }
+                            if (valinta == 2)
+                            {
+                                Console.WriteLine("Ostit heltti potun");
+                                player.pottu++;
+                                player.Money -= 5;
+                            }
+                            if (valinta == 3)
+                            {
+                                Console.WriteLine("Ostit vasaran, sait +1 dmg ja vähensit -2 hp pelaajalta");
+                                player.AttackDamage++;
+                                player.Health -= 2;
+                                player.Money -= 5;
+                                inventory.Add(hammer);
+                            }
+                            if (valinta == 4)
+                            {
+                                Console.WriteLine("Ostit Sormuksen, lisäsit +2 ability dmg ja -2 hp");
+                                player.AbilityDmg += 2;
+                                player.Health -= 2;
+                                player.Money -= 10;
+                                inventory.Add(Ring);
+                            }
+                            if (valinta == 5)
+                            {
+                                Console.WriteLine("Ostit kilven, sait +10 hp ja -2 dmg");
+                                player.Health += 10;
+                                player.AttackDamage -= 2;
+                                player.Money -= 10;
+                                inventory.Add(shield);
+                            }
+                        }
+
+                        if (valinta == 4)
+                        {
                             continue;
                         }
-
-                        // Start the battle
-                        Battle(player, enemies[enemyChoice - 1]);
-                        break;
-                    case 3:
-                        Console.WriteLine("Thanks for playing!");
-                        return;
-                    default:
-                        Console.WriteLine("Invalid choice!");
-                        break;
+                    }
                 }
 
-                // Check if the enemy is defeated
-                if (enemies.IsDefeated)
+                else if (choice == 2)
                 {
-                    Console.WriteLine($"You defeated the {enemies.Name}!");
-                    Console.WriteLine($"You earned {enemies.Gold} gold!");
-                    player.Gold += enemies.Gold;
-                    return;
+                    Enemy enemy;
+
+                    Console.WriteLine("");
+                    Console.WriteLine("Valitse vihollinen!");
+                    Console.WriteLine("1. Örkki");
+                    Console.WriteLine("2. Trolli");
+                    Console.WriteLine("3. Lohikäärme");
+                    Console.WriteLine("4. Takaisin");
+                    Console.Write("Valinta: ");
+                    int enemyChoice = int.Parse(Console.ReadLine());
+
+                    if (enemyChoice == 1)
+                    {
+                        enemy = örkki;
+
+                        while (!enemy.IsDefeated)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine($"Pelaajan HP: {player.Health}");
+                            Console.WriteLine($"Örkin HP: {enemy.Health}");
+
+                            Console.WriteLine("Mitä aiot tehdä?");
+                            Console.WriteLine("1. Hyökkää");
+                            Console.WriteLine("2. Käytä ability");
+                            Console.WriteLine($"3. Käytä HP potion (määrä: {player.pottu})");
+                            Console.WriteLine("4. Pakene");
+                            Console.Write("Valinta: ");
+
+                            int val = int.Parse(Console.ReadLine());
+
+                            switch (val)
+                            {
+                                case 1:
+                                    player.Attack(enemy);
+                                    break;
+                                case 2:
+                                    player.UseAbility(enemy);
+                                    break;
+                                case 3:
+                                    {
+                                        if (player.pottu > 0)
+                                        {
+                                            player.Health += 20;
+                                            player.pottu--;
+                                            Console.WriteLine($"Käytit heltti potun ja sait +20 hp. Sinulla on jäljellä {player.pottu} potiota.");
+                                        }
+                                        if (player.pottu <= 0)
+                                        {
+                                            Console.WriteLine("Sinulla ei ole HP potions");
+                                        }
+                                        break;
+                                    }
+                                case 4:
+                                    Console.WriteLine("Pakenit taistelusta!");
+                                    return;
+                                default:
+                                    Console.WriteLine("ei toimi!");
+                                    break;
+                            }
+
+                            if (enemy.IsDefeated)
+                            {
+                                Console.WriteLine("Tapoit Örkki!");
+                                player.Money += 5;
+                                break;
+                            }
+
+                            enemy.Attack(player);
+
+                            if (player.Health <= 0)
+                            {
+                                Console.WriteLine("Örkki tappoi sinut!");
+                                return;
+                            }
+                        }
+                    }
+
+                    if (enemyChoice == 2)
+                    {
+                        enemy = trolli;
+
+                        while (!enemy.IsDefeatedTro)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine($"Pelaajan HP: {player.Health}");
+                            Console.WriteLine($"Ritarin HP: {enemy.Trohealth}");
+
+                            Console.WriteLine("Mitä aiot tehdä?");
+                            Console.WriteLine("1. Hyökkää");
+                            Console.WriteLine("2. Käytä ability");
+                            Console.WriteLine($"3. Käytä HP potion (määrä: {player.pottu})");
+                            Console.WriteLine("4. Pakene");
+                            Console.Write("Valinta: ");
+
+                            int val = int.Parse(Console.ReadLine());
+
+                            switch (val)
+                            {
+                                case 1:
+                                    player.Attack(enemy);
+                                    break;
+                                case 2:
+                                    player.UseAbility(enemy);
+                                    break;
+                                case 3:
+                                    {
+                                        if (player.pottu > 0)
+                                        {
+                                            player.Health += 20;
+                                            player.pottu--;
+                                            Console.WriteLine($"Käytit heltti potun ja sait +20 hp. Sinulla on jäljellä {player.pottu} potiota.");
+                                        }
+                                        if (player.pottu <= 0)
+                                        {
+                                            Console.WriteLine("Sinulla ei ole HP potions");
+                                        }
+                                        break;
+                                    }
+                                case 4:
+                                    Console.WriteLine("Pakenit taistelusta!");
+                                    return;
+                                default:
+                                    Console.WriteLine("ei toimi!");
+                                    break;
+                            }
+
+                            if (enemy.IsDefeatedTro)
+                            {
+                                Console.WriteLine("Tapoit Trollin!");
+                                player.Money += 10;
+                                break;
+                            }
+
+                            enemy.Attack(player);
+
+                            if (player.Health <= 0)
+                            {
+                                Console.WriteLine("Trolli tappoi sinut!");
+                                continue;
+                            }
+                        }
+                    }
+
+                    if (enemyChoice == 3)
+                    {
+                        enemy = lohikäärme;
+
+                        while (!enemy.IsDefeatedloh)
+                        {
+
+                            Console.WriteLine();
+                            Console.WriteLine($"Pelaajan HP: {player.Health}");
+                            Console.WriteLine($"Lohikäärmeen HP: {enemy.Lohhealth}");
+
+                            Console.WriteLine("Mitä aiot tehdä?");
+                            Console.WriteLine("1. Hyökkää");
+                            Console.WriteLine("2. Käytä ability");
+                            Console.WriteLine($"3. Käytä HP potion (määrä: {player.pottu})");
+                            Console.WriteLine("4. Pakene");
+                            Console.Write("Valinta: ");
+
+                            int val = int.Parse(Console.ReadLine());
+
+                            switch (val)
+                            {
+                                case 1:
+                                    player.Attack(enemy);
+                                    break;
+                                case 2:
+                                    enemy.IsWeakToAbility = true;
+
+                                    player.UseAbility(enemy);
+                                    break;
+                                case 3:
+                                    {
+                                        if (player.pottu > 0)
+                                        {
+                                            player.Health += 20;
+                                            player.pottu--;
+                                            Console.WriteLine($"Käytit heltti potun ja sait +20 hp. Sinulla on jäljellä {player.pottu} potions.");
+                                        }
+                                        if (player.pottu <= 0)
+                                        {
+                                            Console.WriteLine("Sinulla ei ole HP potions");
+                                        }
+                                        break;
+                                    }
+                                case 4:
+                                    Console.WriteLine("Pakenit taistelusta!");
+                                    return;
+                                default:
+                                    Console.WriteLine("ei toimi!");
+                                    break;
+                            }
+
+                            if (enemy.IsDefeatedloh)
+                            {
+                                Console.WriteLine("Tapoit Lohikäärmeen!");
+                                player.Money += 20;
+                                break;
+                            }
+
+                            enemy.Attack(player);
+
+                            if (player.Health <= 0)
+                            {
+                                Console.WriteLine("Lohikäärme tappoi sinut!");
+                                continue;
+                            }
+                        }
+                    }  
+                    if (enemyChoice == 4)
+                    {
+                        continue;
+                    }
                 }
-
-                // Enemy attacks the player
-                enemies.Attack(player);
-
-                // Check if the player is defeated
-                if (player.IsDefeated)
+                else if (choice == 3)
                 {
-                    Console.WriteLine("You were defeated by the enemy!");
-                    Console.WriteLine($"You earned {player.Gold} gold!");
+                    Console.WriteLine();
+                    Console.WriteLine("Inventory:");
+
+                    if (inventory.Count == 0)
+                    {
+                        Console.WriteLine("Your inventory is empty.");
+                    }
+                    else
+                    {
+                        foreach (var item in inventory)
+                        {
+                            Console.WriteLine(item.Name);
+                        }
+                    }
+                }
+                else if (choice == 4)
+                {
+                    Console.WriteLine("Kiitos pelaamisesta!");
                     return;
                 }
             }
-            Console.WriteLine("Congratulations! You completed Knight's Quest!");
         }
     }
-
-    public class Shop
-    {
-        private List<Item> items;
-
-        public Shop()
-        {
-            items = new List<Item>();
-            items.Add(new Item("Health Potion", 10, 50));
-            items.Add(new Item("Sword", 100, 500));
-            items.Add(new Item("Armor", 100, 500));
-        }
-
-        public void Visit(Player player)
-        {
-            Console.WriteLine("Welcome to the shop!");
-            Console.WriteLine($"You have {player.Gold} gold.");
-
-            while (true)
-            {
-                Console.WriteLine();
-                Console.WriteLine("What would you like to buy?");
-                for (int i = 0; i < items.Count; i++)
-                {
-                    Console.WriteLine($"{i + 1}. {items[i].Name} ({items[i].Price} gold)");
-                }
-                Console.WriteLine($"{items.Count + 1}. Leave the shop");
-
-                Console.Write("Enter choice: ");
-                int choice = int.Parse(Console.ReadLine());
-
-                if (choice < 1 || choice > items.Count + 1)
-                {
-                    Console.WriteLine("Invalid choice!");
-                    continue;
-                }
-
-                if (choice == items.Count + 1)
-                {
-                    Console.WriteLine("Thanks for shopping!");
-                    break;
-                }
-
-                Item item = items[choice - 1];
-
-                if (player.Gold < item.Price)
-                {
-                    Console.WriteLine("You don't have enough gold!");
-                    continue;
-                }
-
-                player.Gold -= item.Price;
-                Console.WriteLine($"You bought a {item.Name} for {item.Price} gold!");
-                player.Inventory.Add(item);
-            }
-        }
-    }
-
-    public class Item
-    {
-        public string Name { get; set; }
-        public int Price { get; set; }
-        public int Value { get; set; }
-
-        public Item(string name, int price, int value)
-        {
-            Name = name;
-            Price = price;
-            Value = value;
-        }
-    }
-
 }

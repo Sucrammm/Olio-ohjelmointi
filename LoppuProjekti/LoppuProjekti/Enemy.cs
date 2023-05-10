@@ -1,88 +1,64 @@
 ﻿using System;
 
-namespace KnightsQuest
+namespace LoppuProjekti
 {
     abstract class Enemy
     {
-        // The enemy's health
         public int Health { get; set; } = 50;
-
-        // The enemy's attack damage
+        public int Trohealth { get; set; } = 75;
+        public int Lohhealth { get; set; } = 150;
         public int AttackDamage { get; set; } = 5;
-
-        // The enemy's name
-        public string Name { get; set; }
-
-        // Whether the enemy is defeated
+        public bool IsWeakToAbility { get; set; } = false;
         public bool IsDefeated { get { return Health <= 0; } }
+        public bool IsDefeatedloh { get { return Lohhealth <= 0; } }
+        public bool IsDefeatedTro { get { return Trohealth <= 0; } }
+        public Random random = new Random();
 
-        public int Gold { get; set; }
+        public void Attack(Player player)
+        {
+            int damage = AttackDamage;
+            Console.WriteLine($"Vihollinen hyökkää sinuun ja tekee {damage} damagea!");
+            player.TakeDamage(damage);
+        }
 
-        // The enemy attacks the player
-        public abstract void Attack(Player player);
-
-        // The enemy takes damage from the player
         public void TakeDamage(int damage)
         {
+            if (IsWeakToAbility)
+            {
+                damage *= 2;
+                Console.WriteLine($"Sinä isket vihollisen heikkoon kohtaan ja teet {damage} damagea!");
+            }
+
             Health -= damage;
-            Console.WriteLine($"{Name} takes {damage} damage!");
+            Trohealth -= damage;
+            Lohhealth -= damage;
         }
     }
-
-    class Goblin : Enemy
+    class Örkki : Enemy
     {
-        public Goblin()
+        public Örkki()
         {
-            Name = "Goblin";
-            Health = 20;
-            AttackDamage = 5;
-        }
-
-        public override void Attack(Player player)
-        {
-            int damage = AttackDamage;
-            Console.WriteLine($"The {Name} attacks you for {damage} damage!");
-
-            // Apply damage to the player
-            player.TakeDamage(damage);
-        }
-    }
-
-    class Orc : Enemy
-    {
-        public Orc()
-        {
-            Name = "Orc";
             Health = 50;
-            AttackDamage = 10;
-        }
-
-        public override void Attack(Player player)
-        {
-            int damage = AttackDamage;
-            Console.WriteLine($"The {Name} attacks you for {damage} damage!");
-
-            // Apply damage to the player
-            player.TakeDamage(damage);
+            int AttackDamage = random.Next(3, 8);
         }
     }
 
-    class Dragon : Enemy
+    class Trolli : Enemy
     {
-        public Dragon()
+        public Trolli()
         {
-            Name = "Dragon";
-            Health = 100;
-            AttackDamage = 20;
+            Trohealth = 75;
+            int AttackDamage = random.Next(6, 11);
         }
+    }
 
-        public override void Attack(Player player)
+    class Lohikäärme : Enemy
+    {
+        public Lohikäärme()
         {
-            int damage = AttackDamage;
-            Console.WriteLine($"The {Name} attacks you for {damage} damage!");
-
-            // Apply damage to the player
-            player.TakeDamage(damage);
+            Lohhealth = 100;
+            int AttackDamage = random.Next(10, 21);
+            IsWeakToAbility = true;
         }
     }
 }
